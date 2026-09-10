@@ -1,0 +1,9 @@
+name: quantum-qutip-strong
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.11
+  - qutip=5.3
+  - numpy
+  - matplotlib

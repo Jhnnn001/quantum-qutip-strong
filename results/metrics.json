@@ -1,0 +1,90 @@
+{
+  "units": "Rates divided by reference angular frequency g0; time multiplied by g0; g/g0=1",
+  "initial_state": "cavity vacuum, emitter excited",
+  "cutoff": 2,
+  "solver": {
+    "atol": 1e-11,
+    "rtol": 1e-09,
+    "nsteps": 10000,
+    "normalize_output": false
+  },
+  "versions": {
+    "python": "3.11.16",
+    "qutip": "5.3.1",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "matplotlib": "3.11.1"
+  },
+  "cases": {
+    "lossless": {
+      "g": 1.0,
+      "kappa": 0.0,
+      "gamma": 0.0,
+      "end_time": 12.0,
+      "samples": 1201,
+      "max_trace_error": 3.4870941911790965e-08,
+      "minimum_population": 0.0,
+      "maximum_total_excitation": 1.000000034870942,
+      "final_total_excitation": 1.0000000137590048,
+      "max_analytic_population_error": 3.258122827087817e-08
+    },
+    "strong_coupling": {
+      "g": 1.0,
+      "kappa": 0.2,
+      "gamma": 0.05,
+      "end_time": 12.0,
+      "samples": 1201,
+      "max_trace_error": 6.661338147750939e-16,
+      "minimum_population": 0.0,
+      "maximum_total_excitation": 1.0,
+      "final_total_excitation": 0.21567438928195865
+    },
+    "bad_cavity": {
+      "g": 1.0,
+      "kappa": 20.0,
+      "gamma": 0.02,
+      "end_time": 25.0,
+      "samples": 1201,
+      "max_trace_error": 3.3306690738754696e-15,
+      "minimum_population": 0.0,
+      "maximum_total_excitation": 1.0,
+      "final_total_excitation": 0.003984056156130602
+    }
+  },
+  "purcell": [
+    {
+      "g": 1.0,
+      "kappa": 20.0,
+      "gamma": 0.02,
+      "predicted_rate": 0.22,
+      "fitted_rate": 0.2222468837212164,
+      "relative_rate_error": 0.010213107823710876,
+      "fit_start": 0.5,
+      "fit_end": 13.636363636363637,
+      "max_log_fit_residual": 0.00014826805081406824
+    },
+    {
+      "g": 1.0,
+      "kappa": 40.0,
+      "gamma": 0.02,
+      "predicted_rate": 0.12000000000000001,
+      "fitted_rate": 0.12030164762196019,
+      "relative_rate_error": 0.0025137301830016057,
+      "fit_start": 0.27083333333333326,
+      "fit_end": 24.999999999999993,
+      "max_log_fit_residual": 2.279389210286739e-05
+    },
+    {
+      "g": 1.0,
+      "kappa": 80.0,
+      "gamma": 0.02,
+      "predicted_rate": 0.07,
+      "fitted_rate": 0.07004381510564238,
+      "relative_rate_error": 0.000625930080605297,
+      "fit_start": 0.14285714285714285,
+      "fit_end": 42.857142857142854,
+      "max_log_fit_residual": 4.147656363742355e-06
+    }
+  ],
+  "elapsed_seconds": 0.3165024580084719
+}
